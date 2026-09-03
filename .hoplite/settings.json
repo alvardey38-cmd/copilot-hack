@@ -4,7 +4,7 @@
   "scripts": {
     "setup": {
       "enabled": true,
-      "command": "cd possible-solution/client && npm ci --no-audit --no-fund && cd ../server && pip3 install --break-system-packages -r requirements.txt"
+      "command": "apt-get update >/dev/null 2>&1 && apt-get install -y git-lfs >/dev/null 2>&1; cd possible-solution/client && npm ci --no-audit --no-fund && cd ../server && pip3 install --break-system-packages -r requirements.txt"
     },
     "run": {
       "enabled": true,
