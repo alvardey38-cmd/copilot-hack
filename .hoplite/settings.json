@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "ports": {"preview": 3000, "additional": {}},
+  "scripts": {
+    "setup": {
+      "enabled": true,
+      "command": "cd possible-solution/client && npm ci --no-audit --no-fund && cd ../server && pip3 install --break-system-packages -r requirements.txt"
+    },
+    "run": {
+      "enabled": true,
+      "command": "cd possible-solution/server && (python3 app.py > /tmp/flights-api.log 2>&1 &) && cd ../client && npm run dev -- --host 0.0.0.0 --port 3000"
+    },
+    "archive": {"enabled": true, "command": null},
+    "check": {"enabled": true, "command": null}
+  },
+  "mcpServers": []
+}
